@@ -1,9 +1,5 @@
-import type { IUser } from "./User";
+import type { IComment } from "./Comment";
 
-export interface IReply {
-    id: string;
-    content: string;
-    author: IUser;
-    createdAt: Date;
-    updatedAt: Date;
+export interface IReply extends IComment {
+    replyingTo: string;
 }
